@@ -1,17 +1,17 @@
 <?php
 
 // Let's include some things
-require_once 'includes/mfm_upload_form.inc';
+require_once 'includes/midspin_file_manager/mfm_upload_form.inc';
 
 
-function midspin_file_manager_init(){
+function midspin_testing_module_init(){
 
 }
 
 /*
  * Implements hook_menu
  */
-function midspin_file_manager_menu(){
+function midspin_testing_module_menu(){
 
     $items = array();
 

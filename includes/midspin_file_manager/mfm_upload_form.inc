@@ -27,5 +27,5 @@ function mfm_upload_form_submit($form, &$form_state)
             . 'job.</p>')
     );
 
-    drupal_set_message("Good fuckin' job");
+    drupal_set_message("Good job");
 }
