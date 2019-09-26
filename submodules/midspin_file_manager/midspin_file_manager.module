@@ -1,0 +1,39 @@
+<?php
+
+// Let's include some things
+require_once 'includes/mfm_upload_form.inc';
+
+
+function midspin_file_manager_init(){
+
+}
+
+/**
+ * Implements hook_menu
+ */
+function midspin_file_manager_menu(){
+
+    $items = array();
+
+    // Main admin menu for Midspin Testing Module
+    $items['admin/midspin/mfm'] = array(
+        'title'                 => 'Midspin Testing Module',
+        'page callback'         => 'midspin_file_manager_page_build',
+        'file'                  => 'includes/mfm_admin.inc',
+        'access callback'       => TRUE,
+        'access arguments'      => array('midspin'),
+        'type'                  => MENU_NORMAL_ITEM,
+    );
+
+    //
+    $items['midspin/mfm'] = array(
+        'title' => 'Midspin File Manager',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('mfm_upload_form'),
+        'access callback' => TRUE,
+        'access arguments' => array('midspin'),
+        'type' => MENU_NORMAL_ITEM,
+    );
+
+    return $items;
+}

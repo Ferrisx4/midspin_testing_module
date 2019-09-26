@@ -1,0 +1,6 @@
+name = Midspin File Manager
+description = Midspin File Manager
+dependencies[] = midspin_testing_module:midspin_testing_module
+core = 7.x
+version = 7.x-1.0
+package = Midpsin
